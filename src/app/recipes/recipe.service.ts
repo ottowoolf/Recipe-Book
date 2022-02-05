@@ -23,10 +23,13 @@ export class RecipeService {
     ),
   ];
 
-  getRecipe() {
+  getRecipes() {
     return this.recipes.slice();
   }
   addIngredientsToSHoppingList(ingredients: Ingredient[]) {
-    this.slService.addIngredients(ingredients)
+    this.slService.addIngredients(ingredients);
+  }
+  getRecipe(id: number) {
+    return this.recipes[id];
   }
 }
